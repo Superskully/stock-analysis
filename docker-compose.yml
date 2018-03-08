@@ -1,0 +1,9 @@
+version: '3'
+services:
+  python:
+    build: './docker/python'
+    container_name: 'crypto-python'
+    volumes:
+      - "${APP_DIR}:/app:rw"
+    working_dir: "/app"
+    entrypoint: "/bin/bash /app/docker/python/entrypoint.sh"
