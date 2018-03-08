@@ -7,3 +7,5 @@ services:
       - "${APP_DIR}:/app:rw"
     working_dir: "/app"
     entrypoint: "/bin/bash /app/docker/python/entrypoint.sh"
+    ports:
+      - 8888:8888
